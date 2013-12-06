@@ -13,6 +13,14 @@
 
 ActiveRecord::Schema.define(:version => 20130521170054) do
 
+  create_table "girls", :force => true do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.text     "bio"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "books", :force => true do |t|
     t.integer  "girl_id"
     t.string   "name"
@@ -20,14 +28,8 @@ ActiveRecord::Schema.define(:version => 20130521170054) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-  end
-
-  create_table "girls", :force => true do |t|
-    t.string   "name"
-    t.integer  "age"
-    t.text     "bio"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.index ["girl_id"], :name => "fk__books_girl_id"
+    t.foreign_key ["girl_id"], "girls", ["id"], :on_update => :no_action, :on_delete => :no_action, :name => "fk_books_girl_id"
   end
 
   create_table "posts", :force => true do |t|

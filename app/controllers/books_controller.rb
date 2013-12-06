@@ -1,3 +1,5 @@
+require 'will_paginate/array'
+
 class BooksController < ApplicationController
   # GET /books
   # GET /books.json
@@ -10,7 +12,7 @@ class BooksController < ApplicationController
     @book = Book.new(params[:book])
         respond_to do |format|
           if @book.save
-            format.html { redirect_to @book, notice: 'Performance Entry for the employee was successfully created.' }
+            format.html { redirect_to @book, notice: 'Book for the girl was successfully created.' }
             format.json { render json: @book, status: :created, location: @book }
           else
             format.html { render action: "new" }
@@ -20,13 +22,13 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.find_all_by_girl_id(params[:girl_id])
+  @books = Book.find_all_by_girl_id(params[:girl_id]).paginate(page:  params[:page], per_page: 3)
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @books }
+    end
+  end
 
-                respond_to do |format|
-                    format.html # index.html.erb
-                    format.json { render json: @books }
-                end
-        end
   # GET /books/1
   # GET /books/1.json
   def show
