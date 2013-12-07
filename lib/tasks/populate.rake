@@ -9,7 +9,7 @@ fp = File.new("#{Rails.root}/tmp/auth.txt", "w")
 namespace :db do
   desc "Erase and populate database"
   task :populate => :environment do
-    require 'faker'
+
     require 'active_support' # For Time operations
 
     Rake::Task['db:reset'].invoke
