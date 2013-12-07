@@ -32,11 +32,19 @@
 // Example:
 // @linkColor: #ff0000;
 
-h1 {
+@sansFontFamily:  "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+h1,h2,h3,h4,h5,h6 {
   font-family: lato;
-  font-weight: 100;
+  font-weight: 300;
 }
 
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 22px;
+}
 .centered {
   text-align: center;
 }
@@ -49,6 +57,18 @@ h1 {
   .icon-time {
     color: #40464A;
   }
+}
+
+body {
+  padding-top: 40px;
+}
+/***********************************************************************************************/
+/* Tables */
+/***********************************************************************************************/
+.row-content {
+  width: 80%;
+  padding-left: 10%;
+  padding-top: 20px;
 }
 
 /***********************************************************************************************/
@@ -112,6 +132,17 @@ button.btn, input[type="submit"].btn {
   }
 }
 
+.table-bordered {
+  tr {
+    th {
+      text-align: center;
+    }
+    td {
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+}
 /***********************************************************************************************/
 /* Flash Notifications */
 /***********************************************************************************************/
