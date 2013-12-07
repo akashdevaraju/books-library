@@ -22,8 +22,14 @@
         <td><%= link_to "Procure A New Book",
             new_book_url(:id => girl.id),
             :class => 'btn btn-mini btn-success',:id => 'addnew' %></td>
-        <td><%= link_to "Show Procured Books",
-              books_path(:girl_id=>girl.id), :class => 'btn btn-mini btn-success' , :id => 'submitco' %></td>            
+        <td>
+          <% if Book.where(:girl_id => girl.id).count == 0 -%>
+            <h2>No books, please procure</h2>
+          <% else -%>
+            <%= link_to "Show Procured Books",
+                        books_path(:girl_id=>girl.id), :class => 'btn btn-mini btn-success' , :id => 'submitco' %>
+          <% end -%>
+        </td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_girl_path(girl), :class => 'btn btn-mini' %>
