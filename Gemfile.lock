@@ -248,6 +248,9 @@ GEM
       activesupport (>= 3.0)
       choice (~> 0.1.6)
       ruby-graphviz (~> 1.0.4)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
     rails_best_practices (1.14.4)
       activesupport
       awesome_print
@@ -257,6 +260,8 @@ GEM
       i18n
       require_all
       ruby-progressbar
+    rails_serve_static_assets (0.0.1)
+    rails_stdout_logging (0.0.3)
     railties (3.2.16)
       actionpack (= 3.2.16)
       activesupport (= 3.2.16)
@@ -438,6 +443,7 @@ DEPENDENCIES
   rack-protection
   rails (= 3.2.16)
   rails-erd
+  rails_12factor
   rails_best_practices
   random_data
   rb-inotify
