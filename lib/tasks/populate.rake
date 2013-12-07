@@ -27,5 +27,8 @@ namespace :db do
       girls = Girl.all.map { |girl| { id: girl.id, name: girl.name } }
       Formatador.display_table(girls)
 
+      puts ">> Please login using the following credentials"
+      user = User.all.map { |user| { email: user.email, password: "password" } }
+      Formatador.display_table(user)
   end
 end
