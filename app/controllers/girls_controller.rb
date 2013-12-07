@@ -4,7 +4,7 @@ class GirlsController < ApplicationController
   # GET /girls
   # GET /girls.json
   def index
-    @girls = Girl.all.paginate(page:  params[:page], per_page: 3)
+    @girls = Girl.search(params[:search]).paginate(page:  params[:page], per_page: 3)
 
     respond_to do |format|
       format.html # index.html.erb

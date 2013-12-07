@@ -1,0 +1,3 @@
+<% if @cases.next_page %>
+  $('.pagination').replaceWith('<%= escape_javascript(will_paginate(@girls)) %>');
+<% end %>
