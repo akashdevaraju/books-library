@@ -116,12 +116,13 @@ group :test, :development do
   gem 'populator'
   gem 'random_data'
   gem 'highline', '~> 1.6.9'
-  gem 'faker'
   gem 'parallel_tests'
   gem 'zeus-parallel_tests'
   gem 'email_spec'
   gem 'action_mailer_cache_delivery'
 end
+
+gem 'faker'
 
 group :test do
   gem 'capybara-screenshot'
