@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: books
+  database: booksfaker
   host: localhost
   pool: 5
   username: sky
@@ -10,7 +10,7 @@ development:
 staging:
   adapter: postgresql
   encoding: unicode
-  database: books
+  database: booksfaker
   host: localhost
   pool: 5
   username: sky

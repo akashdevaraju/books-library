@@ -1,8 +1,10 @@
+require 'will_paginate/array'
+
 class GirlsController < ApplicationController
   # GET /girls
   # GET /girls.json
   def index
-    @girls = Girl.all
+    @girls = Girl.all.paginate(page:  params[:page], per_page: 3)
 
     respond_to do |format|
       format.html # index.html.erb
