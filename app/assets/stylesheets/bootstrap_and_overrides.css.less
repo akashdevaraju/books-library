@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
+
 @import "twitter/bootstrap/bootstrap";
 @import "twitter/bootstrap/responsive";
 
@@ -29,3 +31,108 @@
 //
 // Example:
 // @linkColor: #ff0000;
+
+h1 {
+  font-family: lato;
+  font-weight: 100;
+}
+
+.centered {
+  text-align: center;
+}
+
+.main-title {
+  font-size: 6em;
+  text-align: center;
+  padding-top: 3em;
+  font-family: cabin;
+  .icon-time {
+    color: #40464A;
+  }
+}
+
+/***********************************************************************************************/
+/* Forms */
+/***********************************************************************************************/
+.form-inputs {
+  label {
+    display: none;
+  }
+  .sign-check {
+    display: inherit;
+  }
+  #user_admin {
+    display: none;
+  }
+}
+.input-append input, .input-prepend input, .input-append select, .input-prepend select, .input-append .uneditable-input, .input-prepend .uneditable-input {
+  padding: 14px;
+}
+.input-prepend .add-on:first-child, .input-prepend .btn:first-child {
+  border-radius: 4px 0 0 4px;
+  background: white;
+  color: #BEC3C7;
+  padding: 14px;
+  font-size: 19px;
+}
+
+button.btn, input[type="submit"].btn {
+  background: #34495E;
+  color: white;
+  text-shadow: none;
+  font-weight: 700;
+  padding: 15px 30px;
+  font-size: 17px;
+  font-family: lato;
+  border: none;
+}
+
+.auth-form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.sign-in-form {
+  font-family: lato;
+  color: #384450;
+  h1 {
+    padding-top: 2em;
+  }
+  h3 {
+    padding-bottom: 1em;
+  }
+}
+
+.home-btn {
+  background: white;
+  padding: 10px 30px;
+  color: #40464A;
+  &:hover {
+    background: #40464A;
+  }
+}
+
+/***********************************************************************************************/
+/* Flash Notifications */
+/***********************************************************************************************/
+.alert {
+  padding: 15px 0;
+  border-radius: 0px;
+  text-align: center;
+  i {
+    position: relative;
+    top: 3px;
+    color: #58C14A;
+    font-size: 20px;
+    padding-right: 7px;
+  }
+  em {
+    position: relative;
+  }
+}
+
+.alert-danger, .alert-error, .alert-success {
+  font-weight: 700;
+  font-size: 16px;
+  background-color: white;
+}

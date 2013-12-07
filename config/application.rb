@@ -58,5 +58,22 @@ module GirlBooks
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    #Generator Configurations
+    config.generators do |g|
+      g.stylesheets false
+      g.javascripts false
+      g.helper false
+      g.assets false
+      g.fixture_replacement :factory_girl
+    end
+
+    #Devise configs
+    config.to_prepare do
+      Devise::SessionsController.layout 'authentication'
+      Devise::RegistrationsController.layout 'authentication'
+      Devise::ConfirmationsController.layout 'authentication'
+      Devise::UnlocksController.layout 'authentication'
+      Devise::PasswordsController.layout 'authentication'
+    end
   end
 end

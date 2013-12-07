@@ -1,0 +1,24 @@
+  <div class="appheader">
+   <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+<!--         <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a> -->
+        <div class="container-fluid">
+          <ul class="nav pull-right">
+            <% if user_signed_in? -%>
+            <li><a href="/users/edit" data-method="get"><%= current_user.email %></a></li>
+            <li><a href="/users/sign_out" data-method="delete" id="sign_out" rel="nofollow" title="Logout of Application"><i class="icon-off"></i>Logout</a></li>
+            <% else -%>
+            <li><%= link_to "Sign In", new_user_session_path -%> </li>
+            <li><%= link_to "Sign Up", new_user_registration_path -%> </li>
+            <% end -%>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+  </div>
