@@ -11,7 +11,9 @@
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
 </div>
 
-<div id="girls"><%= render 'girls' %></div>
+<div id="girls">
+  <%= render partial: 'girls' %>
+</div>
 
 <%= link_to "Add A New Girl",
             new_girl_path,

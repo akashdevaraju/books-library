@@ -8,6 +8,7 @@ class GirlsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.js
       format.json { render json: @girls }
     end
   end

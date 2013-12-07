@@ -1,3 +1,1 @@
-<% if @cases.next_page %>
-  $('.pagination').replaceWith('<%= escape_javascript(will_paginate(@girls)) %>');
-<% end %>
+$("#girls").html("<%= escape_javascript(render :partial => 'girls') %>");
